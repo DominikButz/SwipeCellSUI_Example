@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		B4F93C56253D62B000F7C3B9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4F93C55253D62B000F7C3B9 /* Preview Assets.xcassets */; };
 		B4F93C61253D62B000F7C3B9 /* SwipeCellSUI_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F93C60253D62B000F7C3B9 /* SwipeCellSUI_ExampleTests.swift */; };
 		B4F93C6C253D62B000F7C3B9 /* SwipeCellSUI_ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F93C6B253D62B000F7C3B9 /* SwipeCellSUI_ExampleUITests.swift */; };
+		B4F93CC4253D70EF00F7C3B9 /* SwipeCellSUI in Frameworks */ = {isa = PBXBuildFile; productRef = B4F93CC3253D70EF00F7C3B9 /* SwipeCellSUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		B4F93C67253D62B000F7C3B9 /* SwipeCellSUI_ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeCellSUI_ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F93C6B253D62B000F7C3B9 /* SwipeCellSUI_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCellSUI_ExampleUITests.swift; sourceTree = "<group>"; };
 		B4F93C6D253D62B000F7C3B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4F93C7C253D62DB00F7C3B9 /* SwipeCellSUI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwipeCellSUI; path = ../../SwipeCellSUI; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4F93CC4253D70EF00F7C3B9 /* SwipeCellSUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +82,7 @@
 				B4F93C5F253D62B000F7C3B9 /* SwipeCellSUI_ExampleTests */,
 				B4F93C6A253D62B000F7C3B9 /* SwipeCellSUI_ExampleUITests */,
 				B4F93C4C253D62AD00F7C3B9 /* Products */,
+				B4F93CC2253D70EF00F7C3B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +99,7 @@
 		B4F93C4D253D62AD00F7C3B9 /* SwipeCellSUI_Example */ = {
 			isa = PBXGroup;
 			children = (
+				B4F93C7C253D62DB00F7C3B9 /* SwipeCellSUI */,
 				B4F93C4E253D62AD00F7C3B9 /* SwipeCellSUI_ExampleApp.swift */,
 				B4F93C50253D62AD00F7C3B9 /* ContentView.swift */,
 				B4F93C52253D62B000F7C3B9 /* Assets.xcassets */,
@@ -130,6 +135,13 @@
 			path = SwipeCellSUI_ExampleUITests;
 			sourceTree = "<group>";
 		};
+		B4F93CC2253D70EF00F7C3B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +158,9 @@
 			dependencies = (
 			);
 			name = SwipeCellSUI_Example;
+			packageProductDependencies = (
+				B4F93CC3253D70EF00F7C3B9 /* SwipeCellSUI */,
+			);
 			productName = SwipeCellSUI_Example;
 			productReference = B4F93C4B253D62AD00F7C3B9 /* SwipeCellSUI_Example.app */;
 			productType = "com.apple.product-type.application";
@@ -580,6 +595,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B4F93CC3253D70EF00F7C3B9 /* SwipeCellSUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwipeCellSUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B4F93C43253D62AC00F7C3B9 /* Project object */;
 }

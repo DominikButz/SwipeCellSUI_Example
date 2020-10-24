@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)"
+options: "f08f880e701b95ca3da89724912e3bcd"
+build_time: [1603274562, 650263000]
+inputs:
+  "/Users/Dominik/Documents/Programmieren/Libraries/SwipeCellSUI_Example/SwipeCellSUI_Example/ContentView.swift": [1603274561, 314315503]
+  "/Users/Dominik/Documents/Programmieren/Libraries/SwipeCellSUI_Example/SwipeCellSUI_Example/SwipeCellSUI_ExampleApp.swift": [1603087149, 93808242]

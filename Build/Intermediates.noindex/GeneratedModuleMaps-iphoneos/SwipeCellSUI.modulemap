@@ -1,0 +1,4 @@
+module SwipeCellSUI {
+header "SwipeCellSUI-Swift.h"
+export *
+}
