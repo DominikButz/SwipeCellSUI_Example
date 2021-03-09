@@ -7,6 +7,7 @@ provides-member:
 - ["12SwipeCellSUI0aB8ModifierV", ""]
 - ["7SwiftUI4ViewP", ""]
 - ["7SwiftUI4ViewP", "swipeCell"]
+- ["7SwiftUI4ViewP", "castToAnyView"]
 provides-dynamic-lookup:
 depends-top-level:
 - "!="
@@ -18,6 +19,7 @@ depends-top-level:
 - !private "<"
 - "=="
 - !private ">"
+- "AnyView"
 - "AssignmentPrecedence"
 - "Bool"
 - "BooleanLiteralType"
@@ -36,6 +38,7 @@ depends-top-level:
 - "State"
 - "SwipeCellActionItem"
 - "SwipeCellModifier"
+- "SwipeCellSettings"
 - "SwipeGroupSide"
 - "TernaryPrecedence"
 - "UINotificationFeedbackGenerator"
@@ -43,22 +46,18 @@ depends-top-level:
 - "View"
 - "ViewModifier"
 - "ZStack"
-- !private "addWidthMargin"
 - !private "cellWidth"
 - "dragOnEnded"
 - !private "openSideLock"
-- !private "openTriggerValue"
-- !private "swipeOutTriggerRatio"
-- "withAnimation"
+- !private "settings"
+- !private "withAnimation"
 - !private "||"
 depends-member:
 - !private ["s18AdditiveArithmeticP", ""]
 - !private ["s18AdditiveArithmeticP", "magnitude"]
 - ["7SwiftUI10AnimatableP", "width"]
-- !private ["7SwiftUI9AnimationV", "callAsFunction"]
-- !private ["7SwiftUI9AnimationV", "default"]
-- !private ["7SwiftUI9AnimationV", "easeInOut"]
-- !private ["7SwiftUI7AnyViewV", "scaleEffect"]
+- !private ["7SwiftUI9AnimationV", "spring"]
+- !private ["7SwiftUI7AnyViewV", "init"]
 - !private ["Sa", "contains"]
 - !private ["Sa", "count"]
 - !private ["Sa", "filter"]
@@ -127,11 +126,8 @@ depends-member:
 - !private ["10Foundation15ContiguousBytesP", "reduce"]
 - !private ["s28CustomDebugStringConvertibleP", "asyncAfter"]
 - ["s28CustomDebugStringConvertibleP", "bounds"]
-- !private ["s28CustomDebugStringConvertibleP", "callAsFunction"]
 - !private ["s28CustomDebugStringConvertibleP", "contains"]
 - !private ["s28CustomDebugStringConvertibleP", "count"]
-- !private ["s28CustomDebugStringConvertibleP", "default"]
-- !private ["s28CustomDebugStringConvertibleP", "easeInOut"]
 - !private ["s28CustomDebugStringConvertibleP", "filter"]
 - !private ["s28CustomDebugStringConvertibleP", "first"]
 - ["s28CustomDebugStringConvertibleP", "init"]
@@ -143,13 +139,11 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "notificationOccurred"]
 - !private ["s28CustomDebugStringConvertibleP", "reduce"]
 - !private ["s28CustomDebugStringConvertibleP", "some"]
+- !private ["s28CustomDebugStringConvertibleP", "spring"]
 - !private ["s28CustomDebugStringConvertibleP", "trailing"]
 - ["s28CustomDebugStringConvertibleP", "width"]
-- !private ["s17CustomReflectableP", "callAsFunction"]
 - !private ["s17CustomReflectableP", "contains"]
 - !private ["s17CustomReflectableP", "count"]
-- !private ["s17CustomReflectableP", "default"]
-- !private ["s17CustomReflectableP", "easeInOut"]
 - !private ["s17CustomReflectableP", "filter"]
 - !private ["s17CustomReflectableP", "first"]
 - !private ["s17CustomReflectableP", "isEmpty"]
@@ -159,16 +153,14 @@ depends-member:
 - !private ["s17CustomReflectableP", "none"]
 - !private ["s17CustomReflectableP", "reduce"]
 - !private ["s17CustomReflectableP", "some"]
+- !private ["s17CustomReflectableP", "spring"]
 - !private ["s17CustomReflectableP", "trailing"]
 - ["s17CustomReflectableP", "width"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "asyncAfter"]
 - ["s23CustomStringConvertibleP", "bounds"]
-- !private ["s23CustomStringConvertibleP", "callAsFunction"]
 - !private ["s23CustomStringConvertibleP", "contains"]
 - !private ["s23CustomStringConvertibleP", "count"]
-- !private ["s23CustomStringConvertibleP", "default"]
-- !private ["s23CustomStringConvertibleP", "easeInOut"]
 - !private ["s23CustomStringConvertibleP", "filter"]
 - !private ["s23CustomStringConvertibleP", "first"]
 - ["s23CustomStringConvertibleP", "init"]
@@ -178,6 +170,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "map"]
 - !private ["s23CustomStringConvertibleP", "notificationOccurred"]
 - !private ["s23CustomStringConvertibleP", "reduce"]
+- !private ["s23CustomStringConvertibleP", "spring"]
 - !private ["10Foundation12DataProtocolP", ""]
 - !private ["10Foundation12DataProtocolP", "contains"]
 - !private ["10Foundation12DataProtocolP", "count"]
@@ -188,8 +181,6 @@ depends-member:
 - !private ["10Foundation12DataProtocolP", "reduce"]
 - !private ["Se", "contains"]
 - !private ["Se", "count"]
-- !private ["Se", "default"]
-- !private ["Se", "easeInOut"]
 - !private ["Se", "filter"]
 - !private ["Se", "first"]
 - !private ["Se", "isEmpty"]
@@ -199,6 +190,7 @@ depends-member:
 - !private ["Se", "none"]
 - !private ["Se", "reduce"]
 - !private ["Se", "some"]
+- !private ["Se", "spring"]
 - !private ["Se", "trailing"]
 - ["Se", "width"]
 - ["So18OS_dispatch_objectC", ""]
@@ -217,8 +209,6 @@ depends-member:
 - !private ["7SwiftUI18DynamicViewContentP", "init"]
 - !private ["SE", "contains"]
 - !private ["SE", "count"]
-- !private ["SE", "default"]
-- !private ["SE", "easeInOut"]
 - !private ["SE", "filter"]
 - !private ["SE", "first"]
 - !private ["SE", "isEmpty"]
@@ -228,17 +218,15 @@ depends-member:
 - !private ["SE", "none"]
 - !private ["SE", "reduce"]
 - !private ["SE", "some"]
+- !private ["SE", "spring"]
 - !private ["SE", "trailing"]
 - ["SE", "width"]
 - !private ["SQ", "=="]
 - ["SQ", ""]
 - !private ["SQ", "asyncAfter"]
 - ["SQ", "bounds"]
-- !private ["SQ", "callAsFunction"]
 - !private ["SQ", "contains"]
 - !private ["SQ", "count"]
-- !private ["SQ", "default"]
-- !private ["SQ", "easeInOut"]
 - !private ["SQ", "filter"]
 - !private ["SQ", "first"]
 - !private ["SQ", "horizontal"]
@@ -254,6 +242,7 @@ depends-member:
 - !private ["SQ", "reduce"]
 - !private ["SQ", "sideFactor"]
 - !private ["SQ", "some"]
+- !private ["SQ", "spring"]
 - ["SQ", "trailing"]
 - !private ["SQ", "translation"]
 - ["SQ", "width"]
@@ -268,20 +257,19 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "map"]
 - !private ["s25ExpressibleByArrayLiteralP", "reduce"]
 - ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
-- ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
+- !private ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
 - !private ["s25ExpressibleByFloatLiteralP", ""]
-- ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
 - !private ["s25ExpressibleByFloatLiteralP", "magnitude"]
 - ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
 - !private ["s27ExpressibleByIntegerLiteralP", ""]
 - ["s27ExpressibleByIntegerLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "magnitude"]
-- !private ["s23ExpressibleByNilLiteralP", "default"]
-- !private ["s23ExpressibleByNilLiteralP", "easeInOut"]
 - !private ["s23ExpressibleByNilLiteralP", "init"]
 - !private ["s23ExpressibleByNilLiteralP", "leading"]
 - !private ["s23ExpressibleByNilLiteralP", "none"]
 - !private ["s23ExpressibleByNilLiteralP", "some"]
+- !private ["s23ExpressibleByNilLiteralP", "spring"]
 - !private ["s23ExpressibleByNilLiteralP", "trailing"]
 - ["s32ExpressibleByStringInterpolationP", ""]
 - ["s26ExpressibleByStringLiteralP", ""]
@@ -347,24 +335,20 @@ depends-member:
 - !private ["SF", "ulpOfOne"]
 - !private ["7SwiftUI7ForEachV", "init"]
 - ["7SwiftUI7GestureP", "Value"]
-- !private ["7SwiftUI7GestureP", "default"]
-- !private ["7SwiftUI7GestureP", "easeInOut"]
 - !private ["7SwiftUI7GestureP", "init"]
 - !private ["7SwiftUI7GestureP", "leading"]
 - !private ["7SwiftUI7GestureP", "none"]
 - !private ["7SwiftUI7GestureP", "onChanged"]
 - !private ["7SwiftUI7GestureP", "onEnded"]
 - !private ["7SwiftUI7GestureP", "some"]
+- !private ["7SwiftUI7GestureP", "spring"]
 - !private ["7SwiftUI7GestureP", "trailing"]
-- !private ["7SwiftUI6HStackV", "edgesIgnoringSafeArea"]
 - !private ["7SwiftUI6HStackV", "init"]
 - ["SH", ""]
 - !private ["SH", "asyncAfter"]
 - ["SH", "bounds"]
 - !private ["SH", "contains"]
 - !private ["SH", "count"]
-- !private ["SH", "default"]
-- !private ["SH", "easeInOut"]
 - !private ["SH", "filter"]
 - !private ["SH", "first"]
 - ["SH", "init"]
@@ -378,13 +362,14 @@ depends-member:
 - !private ["SH", "reduce"]
 - !private ["SH", "sideFactor"]
 - !private ["SH", "some"]
+- !private ["SH", "spring"]
 - ["SH", "trailing"]
 - !private ["s12IdentifiableP", "actionCallback"]
 - !private ["s12IdentifiableP", "backgroundColor"]
 - !private ["s12IdentifiableP", "buttonView"]
 - !private ["s12IdentifiableP", "buttonWidth"]
 - !private ["s12IdentifiableP", "swipeOutAction"]
-- !private ["s12IdentifiableP", "swipeOutButtonViewScaleFactor"]
+- !private ["s12IdentifiableP", "swipeOutButtonView"]
 - !private ["s12IdentifiableP", "swipeOutHapticFeedbackType"]
 - !private ["s12IdentifiableP", "swipeOutIsDestructive"]
 - ["s25LosslessStringConvertibleP", ""]
@@ -441,11 +426,10 @@ depends-member:
 - !private ["So9OS_objectC", "suspend"]
 - !private ["So9OS_objectC", "sync"]
 - !private ["s9OptionSetP", "horizontal"]
-- !private ["Sq", "default"]
-- !private ["Sq", "easeInOut"]
 - !private ["Sq", "leading"]
 - !private ["Sq", "none"]
 - !private ["Sq", "some"]
+- !private ["Sq", "spring"]
 - !private ["Sq", "trailing"]
 - !private ["Sk", ""]
 - !private ["Sk", "contains"]
@@ -495,7 +479,7 @@ depends-member:
 - !private ["12SwipeCellSUI0aB10ActionItemV", "buttonView"]
 - !private ["12SwipeCellSUI0aB10ActionItemV", "buttonWidth"]
 - !private ["12SwipeCellSUI0aB10ActionItemV", "swipeOutAction"]
-- !private ["12SwipeCellSUI0aB10ActionItemV", "swipeOutButtonViewScaleFactor"]
+- !private ["12SwipeCellSUI0aB10ActionItemV", "swipeOutButtonView"]
 - !private ["12SwipeCellSUI0aB10ActionItemV", "swipeOutHapticFeedbackType"]
 - !private ["12SwipeCellSUI0aB10ActionItemV", "swipeOutIsDestructive"]
 - !private ["12SwipeCellSUI0aB8ModifierV", "$hapticFeedbackOccurred"]
@@ -516,6 +500,7 @@ depends-member:
 - !private ["12SwipeCellSUI0aB8ModifierV", "Spacer"]
 - ["12SwipeCellSUI0aB8ModifierV", "State"]
 - ["12SwipeCellSUI0aB8ModifierV", "SwipeCellActionItem"]
+- ["12SwipeCellSUI0aB8ModifierV", "SwipeCellSettings"]
 - ["12SwipeCellSUI0aB8ModifierV", "SwipeGroupSide"]
 - ["12SwipeCellSUI0aB8ModifierV", "UINotificationFeedbackGenerator"]
 - ["12SwipeCellSUI0aB8ModifierV", "UIScreen"]
@@ -529,8 +514,8 @@ depends-member:
 - !private ["12SwipeCellSUI0aB8ModifierV", "_offsetX"]
 - !private ["12SwipeCellSUI0aB8ModifierV", "_openSideLock"]
 - ["12SwipeCellSUI0aB8ModifierV", "_viewListCount"]
-- ["12SwipeCellSUI0aB8ModifierV", "addWidthMargin"]
 - ["12SwipeCellSUI0aB8ModifierV", "body"]
+- ["12SwipeCellSUI0aB8ModifierV", "buttonContentView"]
 - ["12SwipeCellSUI0aB8ModifierV", "cellWidth"]
 - ["12SwipeCellSUI0aB8ModifierV", "dragOnChanged"]
 - ["12SwipeCellSUI0aB8ModifierV", "dragOnEnded"]
@@ -539,22 +524,26 @@ depends-member:
 - !private ["12SwipeCellSUI0aB8ModifierV", "hapticFeedbackOccurred"]
 - ["12SwipeCellSUI0aB8ModifierV", "init"]
 - ["12SwipeCellSUI0aB8ModifierV", "itemButtonWidth"]
-- ["12SwipeCellSUI0aB8ModifierV", "itemContentView"]
 - ["12SwipeCellSUI0aB8ModifierV", "leadingSideGroup"]
+- ["12SwipeCellSUI0aB8ModifierV", "lockSideMenu"]
 - ["12SwipeCellSUI0aB8ModifierV", "menuWidth"]
 - ["12SwipeCellSUI0aB8ModifierV", "nonDraggableCondition"]
 - !private ["12SwipeCellSUI0aB8ModifierV", "offsetX"]
 - !private ["12SwipeCellSUI0aB8ModifierV", "openSideLock"]
-- ["12SwipeCellSUI0aB8ModifierV", "openTriggerValue"]
 - ["12SwipeCellSUI0aB8ModifierV", "setOffsetX"]
+- ["12SwipeCellSUI0aB8ModifierV", "settings"]
+- ["12SwipeCellSUI0aB8ModifierV", "swipeOutAction"]
 - ["12SwipeCellSUI0aB8ModifierV", "swipeOutItemWithHapticFeedback"]
-- ["12SwipeCellSUI0aB8ModifierV", "swipeOutTriggerRatio"]
 - ["12SwipeCellSUI0aB8ModifierV", "swipeRevealAreaOpacity"]
 - ["12SwipeCellSUI0aB8ModifierV", "swipeToRevealArea"]
 - ["12SwipeCellSUI0aB8ModifierV", "trailingSideGroup"]
 - ["12SwipeCellSUI0aB8ModifierV", "triggerHapticFeedbackIfNeeded"]
 - ["12SwipeCellSUI0aB8ModifierV", "warnSwipeOutCondition"]
 - !private ["12SwipeCellSUI0aB8ModifierV", "withAnimation"]
+- !private ["12SwipeCellSUI0aB8SettingsV", "addWidthMargin"]
+- ["12SwipeCellSUI0aB8SettingsV", "init"]
+- !private ["12SwipeCellSUI0aB8SettingsV", "openTriggerValue"]
+- !private ["12SwipeCellSUI0aB8SettingsV", "swipeOutTriggerRatio"]
 - !private ["12SwipeCellSUI0A9GroupSideO", ""]
 - ["12SwipeCellSUI0A9GroupSideO", "leading"]
 - !private ["12SwipeCellSUI0A9GroupSideO", "sideFactor"]
@@ -573,14 +562,15 @@ depends-member:
 - ["So18UITraitEnvironmentP", "main"]
 - !private ["7SwiftUI11DragGestureV5ValueV", "translation"]
 - !private ["7SwiftUI16VectorArithmeticP", "magnitude"]
+- ["7SwiftUI4ViewP", "AnyView"]
 - ["7SwiftUI4ViewP", "CGFloat"]
 - ["7SwiftUI4ViewP", "SwipeCellActionItem"]
 - !private ["7SwiftUI4ViewP", "SwipeCellModifier"]
+- ["7SwiftUI4ViewP", "SwipeCellSettings"]
+- !private ["7SwiftUI4ViewP", "UIScreen"]
 - ["7SwiftUI4ViewP", "View"]
 - ["7SwiftUI4ViewP", ""]
-- !private ["7SwiftUI4ViewP", "animation"]
-- !private ["7SwiftUI4ViewP", "default"]
-- !private ["7SwiftUI4ViewP", "easeInOut"]
+- ["7SwiftUI4ViewP", "castToAnyView"]
 - !private ["7SwiftUI4ViewP", "edgesIgnoringSafeArea"]
 - !private ["7SwiftUI4ViewP", "frame"]
 - !private ["7SwiftUI4ViewP", "gesture"]
@@ -590,12 +580,12 @@ depends-member:
 - !private ["7SwiftUI4ViewP", "none"]
 - !private ["7SwiftUI4ViewP", "offset"]
 - !private ["7SwiftUI4ViewP", "opacity"]
-- !private ["7SwiftUI4ViewP", "padding"]
-- !private ["7SwiftUI4ViewP", "scaleEffect"]
 - !private ["7SwiftUI4ViewP", "some"]
+- !private ["7SwiftUI4ViewP", "spring"]
 - ["7SwiftUI4ViewP", "swipeCell"]
 - !private ["7SwiftUI4ViewP", "trailing"]
 - !private ["7SwiftUI11ViewBuilderV", "buildBlock"]
+- !private ["7SwiftUI11ViewBuilderV", "buildEither"]
 - !private ["7SwiftUI11ViewBuilderV", "buildExpression"]
 - !private ["7SwiftUI11ViewBuilderV", "buildFinalResult"]
 - !private ["7SwiftUI11ViewBuilderV", "buildIf"]
@@ -610,6 +600,7 @@ depends-member:
 - !private ["7SwiftUI12ViewModifierP", "HStack"]
 - !private ["7SwiftUI12ViewModifierP", "Spacer"]
 - ["7SwiftUI12ViewModifierP", "State"]
+- ["7SwiftUI12ViewModifierP", "SwipeCellSettings"]
 - ["7SwiftUI12ViewModifierP", "UINotificationFeedbackGenerator"]
 - ["7SwiftUI12ViewModifierP", "UIScreen"]
 - !private ["7SwiftUI12ViewModifierP", "ZStack"]
@@ -618,8 +609,8 @@ depends-member:
 - ["7SwiftUI12ViewModifierP", "_makeView"]
 - ["7SwiftUI12ViewModifierP", "_makeViewList"]
 - ["7SwiftUI12ViewModifierP", "_viewListCount"]
-- !private ["7SwiftUI12ViewModifierP", "addWidthMargin"]
 - ["7SwiftUI12ViewModifierP", "body"]
+- !private ["7SwiftUI12ViewModifierP", "buttonContentView"]
 - !private ["7SwiftUI12ViewModifierP", "cellWidth"]
 - !private ["7SwiftUI12ViewModifierP", "dragOnChanged"]
 - !private ["7SwiftUI12ViewModifierP", "dragOnEnded"]
@@ -628,16 +619,16 @@ depends-member:
 - !private ["7SwiftUI12ViewModifierP", "hapticFeedbackOccurred"]
 - !private ["7SwiftUI12ViewModifierP", "init"]
 - !private ["7SwiftUI12ViewModifierP", "itemButtonWidth"]
-- !private ["7SwiftUI12ViewModifierP", "itemContentView"]
 - !private ["7SwiftUI12ViewModifierP", "leadingSideGroup"]
+- !private ["7SwiftUI12ViewModifierP", "lockSideMenu"]
 - !private ["7SwiftUI12ViewModifierP", "menuWidth"]
 - !private ["7SwiftUI12ViewModifierP", "nonDraggableCondition"]
 - !private ["7SwiftUI12ViewModifierP", "offsetX"]
 - !private ["7SwiftUI12ViewModifierP", "openSideLock"]
-- !private ["7SwiftUI12ViewModifierP", "openTriggerValue"]
 - !private ["7SwiftUI12ViewModifierP", "setOffsetX"]
+- !private ["7SwiftUI12ViewModifierP", "settings"]
+- !private ["7SwiftUI12ViewModifierP", "swipeOutAction"]
 - !private ["7SwiftUI12ViewModifierP", "swipeOutItemWithHapticFeedback"]
-- !private ["7SwiftUI12ViewModifierP", "swipeOutTriggerRatio"]
 - !private ["7SwiftUI12ViewModifierP", "swipeRevealAreaOpacity"]
 - !private ["7SwiftUI12ViewModifierP", "swipeToRevealArea"]
 - !private ["7SwiftUI12ViewModifierP", "trailingSideGroup"]
@@ -667,7 +658,7 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "reduce"]
 - ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
-- ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["7SwiftUI18_FormatSpecifiableP", "magnitude"]
@@ -697,8 +688,6 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "notificationOccurred"]
 - !private ["s21_ObjectiveCBridgeableP", "contains"]
 - !private ["s21_ObjectiveCBridgeableP", "count"]
-- !private ["s21_ObjectiveCBridgeableP", "default"]
-- !private ["s21_ObjectiveCBridgeableP", "easeInOut"]
 - !private ["s21_ObjectiveCBridgeableP", "filter"]
 - !private ["s21_ObjectiveCBridgeableP", "first"]
 - !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
@@ -708,6 +697,7 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "none"]
 - !private ["s21_ObjectiveCBridgeableP", "reduce"]
 - !private ["s21_ObjectiveCBridgeableP", "some"]
+- !private ["s21_ObjectiveCBridgeableP", "spring"]
 - !private ["s21_ObjectiveCBridgeableP", "trailing"]
 - ["s21_ObjectiveCBridgeableP", "width"]
 - !private ["s26_OptionalNilComparisonTypeV", "leading"]
@@ -745,7 +735,7 @@ depends-nominal:
 - "SQ"
 - "s25ExpressibleByArrayLiteralP"
 - "s43ExpressibleByExtendedGraphemeClusterLiteralP"
-- "s25ExpressibleByFloatLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
 - "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
 - "s32ExpressibleByStringInterpolationP"
@@ -780,6 +770,7 @@ depends-nominal:
 - !private "Sx"
 - !private "12SwipeCellSUI0aB10ActionItemV"
 - "12SwipeCellSUI0aB8ModifierV"
+- "12SwipeCellSUI0aB8SettingsV"
 - "12SwipeCellSUI0A9GroupSideO"
 - "s16TextOutputStreamP"
 - "s20TextOutputStreamableP"
@@ -802,7 +793,7 @@ depends-nominal:
 - !private "s24_DestructorSafeContainerP"
 - "s35_ExpressibleByBuiltinBooleanLiteralP"
 - "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
-- "s33_ExpressibleByBuiltinFloatLiteralP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - "s35_ExpressibleByBuiltinIntegerLiteralP"
 - "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "7SwiftUI18_FormatSpecifiableP"
@@ -835,24 +826,24 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CloudKit.swiftmodule/arm64-apple-ios.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64-apple-ios.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/DeveloperToolsSupport.swiftmodule/arm64-apple-ios.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/usr/include/mach-o/dyld.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "6d908df7d632d0c46b53a449a7a192c3"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "6b531fbe6cbef3fdfa760c1650a2364d"

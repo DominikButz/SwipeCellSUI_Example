@@ -41,6 +41,7 @@ depends-top-level:
 - "String"
 - "StringLiteralType"
 - "SwipeCellActionItem"
+- !private "SwipeCellSettings"
 - "TernaryPrecedence"
 - "Text"
 - "VStack"
@@ -320,6 +321,7 @@ depends-member:
 - ["20SwipeCellSUI_Example7RowViewV", "State"]
 - ["20SwipeCellSUI_Example7RowViewV", "String"]
 - ["20SwipeCellSUI_Example7RowViewV", "SwipeCellActionItem"]
+- !private ["20SwipeCellSUI_Example7RowViewV", "SwipeCellSettings"]
 - !private ["20SwipeCellSUI_Example7RowViewV", "Text"]
 - !private ["20SwipeCellSUI_Example7RowViewV", "VStack"]
 - ["20SwipeCellSUI_Example7RowViewV", "View"]
@@ -371,6 +373,7 @@ depends-member:
 - ["s27StringInterpolationProtocolP", "appendLiteral"]
 - ["s27StringInterpolationProtocolP", "init"]
 - !private ["12SwipeCellSUI0aB10ActionItemV", "init"]
+- !private ["12SwipeCellSUI0aB8SettingsV", "init"]
 - !private ["7SwiftUI4TextV", "fixedSize"]
 - !private ["7SwiftUI4TextV", "frame"]
 - !private ["7SwiftUI4TextV", "init"]
@@ -399,6 +402,7 @@ depends-member:
 - !private ["7SwiftUI4ViewP", "Spacer"]
 - ["7SwiftUI4ViewP", "State"]
 - !private ["7SwiftUI4ViewP", "SwipeCellActionItem"]
+- !private ["7SwiftUI4ViewP", "SwipeCellSettings"]
 - !private ["7SwiftUI4ViewP", "Text"]
 - !private ["7SwiftUI4ViewP", "VStack"]
 - ["7SwiftUI4ViewP", ""]
@@ -557,6 +561,7 @@ depends-nominal:
 - "7SwiftUI5StateV"
 - "s27StringInterpolationProtocolP"
 - !private "12SwipeCellSUI0aB10ActionItemV"
+- !private "12SwipeCellSUI0aB8SettingsV"
 - !private "7SwiftUI4TextV"
 - "s16TextOutputStreamP"
 - "s20TextOutputStreamableP"

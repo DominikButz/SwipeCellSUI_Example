@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)"
+options: "ea9dd0b7f836fe87b8a11e1be836849f"
+build_time: [1615279547, 9575000]
+inputs:
+  "/Users/Dominik/Documents/Programmieren/Libraries/SwipeCellSUI/Sources/SwipeCellSUI/SwipeCellSUI.swift": [1615279546, 963143819]
+  "/Users/Dominik/Documents/Programmieren/Libraries/SwipeCellSUI/Sources/SwipeCellSUI/SwipeCellSUI_Model.swift": [1604051479, 0]
