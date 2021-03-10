@@ -1,18 +1,13 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
 - "SwipeCellModifier"
-- "HorizontalCompress"
 provides-nominal:
 - "12SwipeCellSUI0aB8ModifierV"
-- "12SwipeCellSUI18HorizontalCompressV"
 provides-member:
 - ["12SwipeCellSUI0aB8ModifierV", ""]
 - ["7SwiftUI4ViewP", ""]
-- ["12SwipeCellSUI18HorizontalCompressV", ""]
-- ["7SwiftUI13AnyTransitionV", ""]
 - ["7SwiftUI4ViewP", "swipeCell"]
 - ["7SwiftUI4ViewP", "castToAnyView"]
-- ["7SwiftUI13AnyTransitionV", "horizontalExpandCompress"]
 provides-dynamic-lookup:
 depends-top-level:
 - "!="
@@ -24,30 +19,25 @@ depends-top-level:
 - !private "<"
 - "=="
 - !private ">"
-- "AnyTransition"
 - "AnyView"
 - "AssignmentPrecedence"
 - "Binding"
 - "Bool"
 - "BooleanLiteralType"
 - "Button"
-- !private "CGAffineTransform"
 - "CGFloat"
-- "CGSize"
 - "Content"
 - "DispatchQueue"
 - "Double"
 - "DragGesture"
 - "FloatLiteralType"
 - "ForEach"
-- "GeometryEffect"
 - "HStack"
-- "HorizontalCompress"
 - "Int"
 - "IntegerLiteralType"
-- "ProjectionTransform"
 - "Spacer"
 - "State"
+- "String"
 - "SwipeCellActionItem"
 - "SwipeCellModifier"
 - "SwipeCellSettings"
@@ -59,44 +49,17 @@ depends-top-level:
 - "View"
 - "ViewModifier"
 - "ZStack"
-- !private "animatableData"
 - !private "cellWidth"
 - "dragOnEnded"
 - !private "openSideLock"
 - !private "settings"
-- !private "widthFactor"
 - !private "withAnimation"
 - !private "||"
 depends-member:
-- ["s18AdditiveArithmeticP", ""]
+- !private ["s18AdditiveArithmeticP", ""]
 - !private ["s18AdditiveArithmeticP", "magnitude"]
-- ["7SwiftUI10AnimatableP", "AnimatableData"]
-- ["7SwiftUI10AnimatableP", "Body"]
-- !private ["7SwiftUI10AnimatableP", "CGAffineTransform"]
-- ["7SwiftUI10AnimatableP", "Default_AnimatableData"]
-- ["7SwiftUI10AnimatableP", "Default_Body"]
-- !private ["7SwiftUI10AnimatableP", "ProjectionTransform"]
-- ["7SwiftUI10AnimatableP", ""]
-- ["7SwiftUI10AnimatableP", "_Default_AnimatableData"]
-- ["7SwiftUI10AnimatableP", "_Default_Body"]
-- ["7SwiftUI10AnimatableP", "_affectsLayout"]
-- ["7SwiftUI10AnimatableP", "_makeAnimatable"]
-- ["7SwiftUI10AnimatableP", "_makeView"]
-- ["7SwiftUI10AnimatableP", "_makeViewList"]
-- ["7SwiftUI10AnimatableP", "_viewListCount"]
-- ["7SwiftUI10AnimatableP", "affectsLayout"]
-- ["7SwiftUI10AnimatableP", "animatableData"]
-- ["7SwiftUI10AnimatableP", "body"]
-- ["7SwiftUI10AnimatableP", "effectValue"]
-- !private ["7SwiftUI10AnimatableP", "init"]
 - ["7SwiftUI10AnimatableP", "width"]
-- !private ["7SwiftUI10AnimatableP", "widthFactor"]
 - !private ["7SwiftUI9AnimationV", "spring"]
-- ["7SwiftUI13AnyTransitionV", "AnyTransition"]
-- !private ["7SwiftUI13AnyTransitionV", "HorizontalCompress"]
-- ["7SwiftUI13AnyTransitionV", ""]
-- ["7SwiftUI13AnyTransitionV", "horizontalExpandCompress"]
-- !private ["7SwiftUI13AnyTransitionV", "modifier"]
 - !private ["7SwiftUI7AnyViewV", "init"]
 - !private ["Sa", "contains"]
 - !private ["Sa", "count"]
@@ -122,8 +85,6 @@ depends-member:
 - ["7SwiftUI7BindingV", "subscript"]
 - ["7SwiftUI7BindingV", "wrappedValue"]
 - !private ["7SwiftUI6ButtonV", "init"]
-- !private ["So17CGAffineTransformV", "concatenating"]
-- !private ["So17CGAffineTransformV", "init"]
 - !private ["12CoreGraphics7CGFloatV", "magnitude"]
 - ["So6CGRectV", "width"]
 - !private ["So6CGSizeV", "width"]
@@ -188,6 +149,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "some"]
 - !private ["s28CustomDebugStringConvertibleP", "spring"]
 - !private ["s28CustomDebugStringConvertibleP", "trailing"]
+- ["s28CustomDebugStringConvertibleP", "uuidString"]
 - ["s28CustomDebugStringConvertibleP", "width"]
 - !private ["s17CustomReflectableP", "contains"]
 - !private ["s17CustomReflectableP", "count"]
@@ -203,6 +165,7 @@ depends-member:
 - !private ["s17CustomReflectableP", "some"]
 - !private ["s17CustomReflectableP", "spring"]
 - !private ["s17CustomReflectableP", "trailing"]
+- ["s17CustomReflectableP", "uuidString"]
 - ["s17CustomReflectableP", "width"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "asyncAfter"]
@@ -219,6 +182,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "notificationOccurred"]
 - !private ["s23CustomStringConvertibleP", "reduce"]
 - !private ["s23CustomStringConvertibleP", "spring"]
+- ["s23CustomStringConvertibleP", "uuidString"]
 - !private ["10Foundation12DataProtocolP", ""]
 - !private ["10Foundation12DataProtocolP", "contains"]
 - !private ["10Foundation12DataProtocolP", "count"]
@@ -227,7 +191,6 @@ depends-member:
 - !private ["10Foundation12DataProtocolP", "isEmpty"]
 - !private ["10Foundation12DataProtocolP", "map"]
 - !private ["10Foundation12DataProtocolP", "reduce"]
-- !private ["Se", "concatenating"]
 - !private ["Se", "contains"]
 - !private ["Se", "count"]
 - !private ["Se", "filter"]
@@ -242,6 +205,7 @@ depends-member:
 - !private ["Se", "some"]
 - !private ["Se", "spring"]
 - !private ["Se", "trailing"]
+- ["Se", "uuidString"]
 - ["Se", "width"]
 - ["So18OS_dispatch_objectC", ""]
 - !private ["So18OS_dispatch_objectC", "asyncAfter"]
@@ -257,7 +221,6 @@ depends-member:
 - ["7SwiftUI15DynamicPropertyP", "init"]
 - ["7SwiftUI15DynamicPropertyP", "wrappedValue"]
 - !private ["7SwiftUI18DynamicViewContentP", "init"]
-- !private ["SE", "concatenating"]
 - !private ["SE", "contains"]
 - !private ["SE", "count"]
 - !private ["SE", "filter"]
@@ -272,12 +235,12 @@ depends-member:
 - !private ["SE", "some"]
 - !private ["SE", "spring"]
 - !private ["SE", "trailing"]
+- ["SE", "uuidString"]
 - ["SE", "width"]
 - !private ["SQ", "=="]
 - ["SQ", ""]
 - !private ["SQ", "asyncAfter"]
 - ["SQ", "bounds"]
-- !private ["SQ", "concatenating"]
 - !private ["SQ", "contains"]
 - !private ["SQ", "count"]
 - !private ["SQ", "filter"]
@@ -298,6 +261,7 @@ depends-member:
 - !private ["SQ", "spring"]
 - ["SQ", "trailing"]
 - !private ["SQ", "translation"]
+- ["SQ", "uuidString"]
 - ["SQ", "width"]
 - !private ["s25ExpressibleByArrayLiteralP", ""]
 - !private ["s25ExpressibleByArrayLiteralP", "contains"]
@@ -387,26 +351,6 @@ depends-member:
 - !private ["SF", "ulp"]
 - !private ["SF", "ulpOfOne"]
 - !private ["7SwiftUI7ForEachV", "init"]
-- ["7SwiftUI14GeometryEffectP", "AnimatableData"]
-- ["7SwiftUI14GeometryEffectP", "Body"]
-- !private ["7SwiftUI14GeometryEffectP", "CGAffineTransform"]
-- ["7SwiftUI14GeometryEffectP", "Default_AnimatableData"]
-- ["7SwiftUI14GeometryEffectP", "Default_Body"]
-- !private ["7SwiftUI14GeometryEffectP", "ProjectionTransform"]
-- ["7SwiftUI14GeometryEffectP", ""]
-- ["7SwiftUI14GeometryEffectP", "_Default_AnimatableData"]
-- ["7SwiftUI14GeometryEffectP", "_Default_Body"]
-- ["7SwiftUI14GeometryEffectP", "_affectsLayout"]
-- ["7SwiftUI14GeometryEffectP", "_makeAnimatable"]
-- ["7SwiftUI14GeometryEffectP", "_makeView"]
-- ["7SwiftUI14GeometryEffectP", "_makeViewList"]
-- ["7SwiftUI14GeometryEffectP", "_viewListCount"]
-- ["7SwiftUI14GeometryEffectP", "affectsLayout"]
-- ["7SwiftUI14GeometryEffectP", "animatableData"]
-- ["7SwiftUI14GeometryEffectP", "body"]
-- ["7SwiftUI14GeometryEffectP", "effectValue"]
-- !private ["7SwiftUI14GeometryEffectP", "init"]
-- !private ["7SwiftUI14GeometryEffectP", "widthFactor"]
 - ["7SwiftUI7GestureP", "Value"]
 - !private ["7SwiftUI7GestureP", "init"]
 - !private ["7SwiftUI7GestureP", "leading"]
@@ -437,28 +381,7 @@ depends-member:
 - !private ["SH", "some"]
 - !private ["SH", "spring"]
 - ["SH", "trailing"]
-- ["12SwipeCellSUI18HorizontalCompressV", "AnimatableData"]
-- ["12SwipeCellSUI18HorizontalCompressV", "Body"]
-- !private ["12SwipeCellSUI18HorizontalCompressV", "CGAffineTransform"]
-- ["12SwipeCellSUI18HorizontalCompressV", "CGFloat"]
-- ["12SwipeCellSUI18HorizontalCompressV", "CGSize"]
-- ["12SwipeCellSUI18HorizontalCompressV", "Default_AnimatableData"]
-- ["12SwipeCellSUI18HorizontalCompressV", "Default_Body"]
-- ["12SwipeCellSUI18HorizontalCompressV", "ProjectionTransform"]
-- ["12SwipeCellSUI18HorizontalCompressV", ""]
-- ["12SwipeCellSUI18HorizontalCompressV", "_Default_AnimatableData"]
-- ["12SwipeCellSUI18HorizontalCompressV", "_Default_Body"]
-- ["12SwipeCellSUI18HorizontalCompressV", "_affectsLayout"]
-- ["12SwipeCellSUI18HorizontalCompressV", "_makeAnimatable"]
-- ["12SwipeCellSUI18HorizontalCompressV", "_makeView"]
-- ["12SwipeCellSUI18HorizontalCompressV", "_makeViewList"]
-- ["12SwipeCellSUI18HorizontalCompressV", "_viewListCount"]
-- ["12SwipeCellSUI18HorizontalCompressV", "affectsLayout"]
-- ["12SwipeCellSUI18HorizontalCompressV", "animatableData"]
-- ["12SwipeCellSUI18HorizontalCompressV", "body"]
-- ["12SwipeCellSUI18HorizontalCompressV", "effectValue"]
-- ["12SwipeCellSUI18HorizontalCompressV", "init"]
-- ["12SwipeCellSUI18HorizontalCompressV", "widthFactor"]
+- ["SH", "uuidString"]
 - !private ["s12IdentifiableP", "actionCallback"]
 - !private ["s12IdentifiableP", "backgroundColor"]
 - !private ["s12IdentifiableP", "buttonView"]
@@ -526,7 +449,6 @@ depends-member:
 - !private ["Sq", "some"]
 - !private ["Sq", "spring"]
 - !private ["Sq", "trailing"]
-- !private ["7SwiftUI19ProjectionTransformV", "init"]
 - !private ["Sk", ""]
 - !private ["Sk", "contains"]
 - !private ["Sk", "count"]
@@ -546,6 +468,7 @@ depends-member:
 - !private ["SY", ""]
 - !private ["SY", "horizontal"]
 - ["10Foundation20ReferenceConvertibleP", "init"]
+- ["10Foundation20ReferenceConvertibleP", "uuidString"]
 - !private ["7Combine9SchedulerP", "asyncAfter"]
 - !private ["7Combine9SchedulerP", "main"]
 - !private ["ST", "Element"]
@@ -579,11 +502,10 @@ depends-member:
 - !private ["12SwipeCellSUI0aB10ActionItemV", "swipeOutButtonView"]
 - !private ["12SwipeCellSUI0aB10ActionItemV", "swipeOutHapticFeedbackType"]
 - !private ["12SwipeCellSUI0aB10ActionItemV", "swipeOutIsDestructive"]
-- ["12SwipeCellSUI0aB8ModifierV", "$currentDragCellID"]
+- ["12SwipeCellSUI0aB8ModifierV", "$currentUserInteractionCellID"]
 - !private ["12SwipeCellSUI0aB8ModifierV", "$hapticFeedbackOccurred"]
 - !private ["12SwipeCellSUI0aB8ModifierV", "$offsetX"]
 - !private ["12SwipeCellSUI0aB8ModifierV", "$openSideLock"]
-- !private ["12SwipeCellSUI0aB8ModifierV", "AnyTransition"]
 - ["12SwipeCellSUI0aB8ModifierV", "Binding"]
 - ["12SwipeCellSUI0aB8ModifierV", "Body"]
 - ["12SwipeCellSUI0aB8ModifierV", "Bool"]
@@ -599,6 +521,7 @@ depends-member:
 - ["12SwipeCellSUI0aB8ModifierV", "Int"]
 - !private ["12SwipeCellSUI0aB8ModifierV", "Spacer"]
 - ["12SwipeCellSUI0aB8ModifierV", "State"]
+- ["12SwipeCellSUI0aB8ModifierV", "String"]
 - ["12SwipeCellSUI0aB8ModifierV", "SwipeCellActionItem"]
 - ["12SwipeCellSUI0aB8ModifierV", "SwipeCellSettings"]
 - ["12SwipeCellSUI0aB8ModifierV", "SwipeGroupSide"]
@@ -609,7 +532,7 @@ depends-member:
 - !private ["12SwipeCellSUI0aB8ModifierV", "ZStack"]
 - ["12SwipeCellSUI0aB8ModifierV", ""]
 - ["12SwipeCellSUI0aB8ModifierV", "_Default_Body"]
-- !private ["12SwipeCellSUI0aB8ModifierV", "_currentDragCellID"]
+- !private ["12SwipeCellSUI0aB8ModifierV", "_currentUserInteractionCellID"]
 - !private ["12SwipeCellSUI0aB8ModifierV", "_hapticFeedbackOccurred"]
 - ["12SwipeCellSUI0aB8ModifierV", "_makeView"]
 - ["12SwipeCellSUI0aB8ModifierV", "_makeViewList"]
@@ -619,7 +542,7 @@ depends-member:
 - ["12SwipeCellSUI0aB8ModifierV", "body"]
 - ["12SwipeCellSUI0aB8ModifierV", "buttonContentView"]
 - ["12SwipeCellSUI0aB8ModifierV", "cellWidth"]
-- ["12SwipeCellSUI0aB8ModifierV", "currentDragCellID"]
+- ["12SwipeCellSUI0aB8ModifierV", "currentUserInteractionCellID"]
 - ["12SwipeCellSUI0aB8ModifierV", "dragOnChanged"]
 - ["12SwipeCellSUI0aB8ModifierV", "dragOnEnded"]
 - ["12SwipeCellSUI0aB8ModifierV", "dynamicButtonWidth"]
@@ -665,16 +588,17 @@ depends-member:
 - ["So18UITraitEnvironmentP", "bounds"]
 - ["So18UITraitEnvironmentP", "main"]
 - ["10Foundation4UUIDV", "init"]
+- ["10Foundation4UUIDV", "uuidString"]
 - !private ["7SwiftUI11DragGestureV5ValueV", "translation"]
 - !private ["7SwiftUI16VectorArithmeticP", "magnitude"]
 - ["7SwiftUI4ViewP", "AnyView"]
 - ["7SwiftUI4ViewP", "Binding"]
 - ["7SwiftUI4ViewP", "CGFloat"]
+- ["7SwiftUI4ViewP", "String"]
 - ["7SwiftUI4ViewP", "SwipeCellActionItem"]
 - !private ["7SwiftUI4ViewP", "SwipeCellModifier"]
 - ["7SwiftUI4ViewP", "SwipeCellSettings"]
 - !private ["7SwiftUI4ViewP", "UIScreen"]
-- ["7SwiftUI4ViewP", "UUID"]
 - ["7SwiftUI4ViewP", "View"]
 - ["7SwiftUI4ViewP", ""]
 - ["7SwiftUI4ViewP", "castToAnyView"]
@@ -693,27 +617,21 @@ depends-member:
 - !private ["7SwiftUI4ViewP", "spring"]
 - ["7SwiftUI4ViewP", "swipeCell"]
 - !private ["7SwiftUI4ViewP", "trailing"]
-- !private ["7SwiftUI4ViewP", "transition"]
 - !private ["7SwiftUI11ViewBuilderV", "buildBlock"]
 - !private ["7SwiftUI11ViewBuilderV", "buildEither"]
 - !private ["7SwiftUI11ViewBuilderV", "buildExpression"]
 - !private ["7SwiftUI11ViewBuilderV", "buildFinalResult"]
 - !private ["7SwiftUI11ViewBuilderV", "buildIf"]
 - !private ["7SwiftUI11ViewBuilderV", "buildOptional"]
-- ["7SwiftUI12ViewModifierP", "AnimatableData"]
-- !private ["7SwiftUI12ViewModifierP", "AnyTransition"]
 - ["7SwiftUI12ViewModifierP", "Binding"]
 - ["7SwiftUI12ViewModifierP", "Body"]
 - !private ["7SwiftUI12ViewModifierP", "Button"]
-- !private ["7SwiftUI12ViewModifierP", "CGAffineTransform"]
 - ["7SwiftUI12ViewModifierP", "Content"]
-- ["7SwiftUI12ViewModifierP", "Default_AnimatableData"]
 - ["7SwiftUI12ViewModifierP", "Default_Body"]
 - !private ["7SwiftUI12ViewModifierP", "DispatchQueue"]
 - !private ["7SwiftUI12ViewModifierP", "DragGesture"]
 - !private ["7SwiftUI12ViewModifierP", "ForEach"]
 - !private ["7SwiftUI12ViewModifierP", "HStack"]
-- !private ["7SwiftUI12ViewModifierP", "ProjectionTransform"]
 - !private ["7SwiftUI12ViewModifierP", "Spacer"]
 - ["7SwiftUI12ViewModifierP", "State"]
 - ["7SwiftUI12ViewModifierP", "SwipeCellSettings"]
@@ -722,23 +640,17 @@ depends-member:
 - ["7SwiftUI12ViewModifierP", "UUID"]
 - !private ["7SwiftUI12ViewModifierP", "ZStack"]
 - ["7SwiftUI12ViewModifierP", ""]
-- ["7SwiftUI12ViewModifierP", "_Default_AnimatableData"]
 - ["7SwiftUI12ViewModifierP", "_Default_Body"]
-- ["7SwiftUI12ViewModifierP", "_affectsLayout"]
-- ["7SwiftUI12ViewModifierP", "_makeAnimatable"]
 - ["7SwiftUI12ViewModifierP", "_makeView"]
 - ["7SwiftUI12ViewModifierP", "_makeViewList"]
 - ["7SwiftUI12ViewModifierP", "_viewListCount"]
-- ["7SwiftUI12ViewModifierP", "affectsLayout"]
-- ["7SwiftUI12ViewModifierP", "animatableData"]
 - ["7SwiftUI12ViewModifierP", "body"]
 - !private ["7SwiftUI12ViewModifierP", "buttonContentView"]
 - !private ["7SwiftUI12ViewModifierP", "cellWidth"]
-- !private ["7SwiftUI12ViewModifierP", "currentDragCellID"]
+- !private ["7SwiftUI12ViewModifierP", "currentUserInteractionCellID"]
 - !private ["7SwiftUI12ViewModifierP", "dragOnChanged"]
 - !private ["7SwiftUI12ViewModifierP", "dragOnEnded"]
 - !private ["7SwiftUI12ViewModifierP", "dynamicButtonWidth"]
-- ["7SwiftUI12ViewModifierP", "effectValue"]
 - !private ["7SwiftUI12ViewModifierP", "generator"]
 - !private ["7SwiftUI12ViewModifierP", "hapticFeedbackOccurred"]
 - !private ["7SwiftUI12ViewModifierP", "id"]
@@ -759,7 +671,6 @@ depends-member:
 - !private ["7SwiftUI12ViewModifierP", "trailingSideGroup"]
 - !private ["7SwiftUI12ViewModifierP", "triggerHapticFeedbackIfNeeded"]
 - !private ["7SwiftUI12ViewModifierP", "warnSwipeOutCondition"]
-- !private ["7SwiftUI12ViewModifierP", "widthFactor"]
 - !private ["7SwiftUI12ViewModifierP", "withAnimation"]
 - !private ["7SwiftUI6ZStackV", "frame"]
 - !private ["7SwiftUI6ZStackV", "init"]
@@ -813,7 +724,6 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "main"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "notificationOccurred"]
 - ["s21_ObjectiveCBridgeableP", ""]
-- !private ["s21_ObjectiveCBridgeableP", "concatenating"]
 - !private ["s21_ObjectiveCBridgeableP", "contains"]
 - !private ["s21_ObjectiveCBridgeableP", "count"]
 - !private ["s21_ObjectiveCBridgeableP", "filter"]
@@ -828,22 +738,21 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "some"]
 - !private ["s21_ObjectiveCBridgeableP", "spring"]
 - !private ["s21_ObjectiveCBridgeableP", "trailing"]
+- ["s21_ObjectiveCBridgeableP", "uuidString"]
 - ["s21_ObjectiveCBridgeableP", "width"]
 - !private ["s26_OptionalNilComparisonTypeV", "leading"]
 - !private ["s26_OptionalNilComparisonTypeV", "trailing"]
 - !private ["7SwiftUI21_ViewModifier_ContentV", "offset"]
 depends-nominal:
-- "s18AdditiveArithmeticP"
+- !private "s18AdditiveArithmeticP"
 - "7SwiftUI10AnimatableP"
 - !private "7SwiftUI9AnimationV"
-- "7SwiftUI13AnyTransitionV"
 - !private "7SwiftUI7AnyViewV"
 - !private "Sa"
 - "SK"
 - !private "SB"
 - "7SwiftUI7BindingV"
 - !private "7SwiftUI6ButtonV"
-- !private "So17CGAffineTransformV"
 - !private "12CoreGraphics7CGFloatV"
 - "So6CGRectV"
 - !private "So6CGSizeV"
@@ -875,11 +784,9 @@ depends-nominal:
 - "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "SF"
 - !private "7SwiftUI7ForEachV"
-- "7SwiftUI14GeometryEffectP"
 - "7SwiftUI7GestureP"
 - !private "7SwiftUI6HStackV"
 - "SH"
-- "12SwipeCellSUI18HorizontalCompressV"
 - !private "s12IdentifiableP"
 - "s25LosslessStringConvertibleP"
 - !private "SM"
@@ -891,7 +798,6 @@ depends-nominal:
 - "So9OS_objectC"
 - !private "s9OptionSetP"
 - !private "Sq"
-- !private "7SwiftUI19ProjectionTransformV"
 - !private "Sk"
 - !private "Sm"
 - !private "SY"
@@ -983,4 +889,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "a8159050fd1dfe32a0f2029befb105c7"
+interface-hash: "5a8f85abb6b36d8298d91907018f9ab1"

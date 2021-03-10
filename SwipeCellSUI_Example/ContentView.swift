@@ -11,7 +11,7 @@ import SwipeCellSUI
 struct ContentView: View {
     
     @State var data = (1...10).map { "Item \($0)" }
-    @State var currentDragCellID: UUID?
+    @State var currentUserInteractionCellID: String?
     
     var body: some View {
         GeometryReader { proxy in
@@ -22,7 +22,7 @@ struct ContentView: View {
                                 self.data = self.data.filter({ (anyItem) -> Bool in
                                     anyItem != item
                                 })
-                        }, currentDragCellID: $currentDragCellID)
+                        }, currentUserInteractionCellID: $currentUserInteractionCellID)
                     }
                 }.animation(.default, value: data)
             }
@@ -36,12 +36,15 @@ struct RowView: View {
     var item: String
     @State private var isPinned: Bool = false
     var deletionCallback: (String)->()
-    @Binding var currentDragCellID: UUID?
+    @Binding var currentUserInteractionCellID: String?
     
     var body: some View {
         Text(item).frame(width: availableWidth, height:100)
         .background(RoundedRectangle(cornerRadius: 5).foregroundColor(.green))
-            .swipeCell(cellWidth: availableWidth, leadingSideGroup: leftGroup(), trailingSideGroup: rightGroup(), currentDragCellID: $currentDragCellID, settings: SwipeCellSettings())
+            .swipeCell(id: self.item, cellWidth: availableWidth, leadingSideGroup: leftGroup(), trailingSideGroup: rightGroup(), currentUserInteractionCellID: $currentUserInteractionCellID, settings: SwipeCellSettings())
+            .onTapGesture {
+                self.currentUserInteractionCellID = item
+            }
      
     }
     

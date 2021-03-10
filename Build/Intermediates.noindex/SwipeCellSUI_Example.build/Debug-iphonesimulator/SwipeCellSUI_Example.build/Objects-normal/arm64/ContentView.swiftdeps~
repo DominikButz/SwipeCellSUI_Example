@@ -14,7 +14,7 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "!="
-- "$currentDragCellID"
+- "$currentUserInteractionCellID"
 - "-"
 - "..."
 - "=="
@@ -46,7 +46,6 @@ depends-top-level:
 - !private "SwipeCellSettings"
 - !private "TernaryPrecedence"
 - "Text"
-- "UUID"
 - "VStack"
 - "View"
 - !private "availableWidth"
@@ -90,7 +89,7 @@ depends-member:
 - !private ["7SwiftUI15CommandsBuilderV", "buildIf"]
 - !private ["7SwiftUI15CommandsBuilderV", "buildOptional"]
 - ["SL", ""]
-- ["20SwipeCellSUI_Example11ContentViewV", "$currentDragCellID"]
+- ["20SwipeCellSUI_Example11ContentViewV", "$currentUserInteractionCellID"]
 - ["20SwipeCellSUI_Example11ContentViewV", "$data"]
 - ["20SwipeCellSUI_Example11ContentViewV", "Body"]
 - !private ["20SwipeCellSUI_Example11ContentViewV", "Bool"]
@@ -101,17 +100,17 @@ depends-member:
 - !private ["20SwipeCellSUI_Example11ContentViewV", "RowView"]
 - !private ["20SwipeCellSUI_Example11ContentViewV", "ScrollView"]
 - ["20SwipeCellSUI_Example11ContentViewV", "State"]
-- ["20SwipeCellSUI_Example11ContentViewV", "UUID"]
+- ["20SwipeCellSUI_Example11ContentViewV", "String"]
 - ["20SwipeCellSUI_Example11ContentViewV", "View"]
 - ["20SwipeCellSUI_Example11ContentViewV", ""]
 - ["20SwipeCellSUI_Example11ContentViewV", "_Default_Body"]
-- !private ["20SwipeCellSUI_Example11ContentViewV", "_currentDragCellID"]
+- !private ["20SwipeCellSUI_Example11ContentViewV", "_currentUserInteractionCellID"]
 - !private ["20SwipeCellSUI_Example11ContentViewV", "_data"]
 - ["20SwipeCellSUI_Example11ContentViewV", "_makeView"]
 - ["20SwipeCellSUI_Example11ContentViewV", "_makeViewList"]
 - ["20SwipeCellSUI_Example11ContentViewV", "_viewListCount"]
 - ["20SwipeCellSUI_Example11ContentViewV", "body"]
-- ["20SwipeCellSUI_Example11ContentViewV", "currentDragCellID"]
+- ["20SwipeCellSUI_Example11ContentViewV", "currentUserInteractionCellID"]
 - ["20SwipeCellSUI_Example11ContentViewV", "data"]
 - ["20SwipeCellSUI_Example11ContentViewV", "init"]
 - !private ["20SwipeCellSUI_Example20ContentView_PreviewsV", "ContentView"]
@@ -319,7 +318,7 @@ depends-member:
 - !private ["SY", "warning"]
 - !private ["7SwiftUI16RoundedRectangleV", "foregroundColor"]
 - !private ["7SwiftUI16RoundedRectangleV", "init"]
-- ["20SwipeCellSUI_Example7RowViewV", "$currentDragCellID"]
+- ["20SwipeCellSUI_Example7RowViewV", "$currentUserInteractionCellID"]
 - !private ["20SwipeCellSUI_Example7RowViewV", "$isPinned"]
 - ["20SwipeCellSUI_Example7RowViewV", "AnyView"]
 - ["20SwipeCellSUI_Example7RowViewV", "Binding"]
@@ -336,19 +335,18 @@ depends-member:
 - ["20SwipeCellSUI_Example7RowViewV", "SwipeCellActionItem"]
 - !private ["20SwipeCellSUI_Example7RowViewV", "SwipeCellSettings"]
 - !private ["20SwipeCellSUI_Example7RowViewV", "Text"]
-- ["20SwipeCellSUI_Example7RowViewV", "UUID"]
 - !private ["20SwipeCellSUI_Example7RowViewV", "VStack"]
 - ["20SwipeCellSUI_Example7RowViewV", "View"]
 - ["20SwipeCellSUI_Example7RowViewV", ""]
 - ["20SwipeCellSUI_Example7RowViewV", "_Default_Body"]
-- !private ["20SwipeCellSUI_Example7RowViewV", "_currentDragCellID"]
+- !private ["20SwipeCellSUI_Example7RowViewV", "_currentUserInteractionCellID"]
 - !private ["20SwipeCellSUI_Example7RowViewV", "_isPinned"]
 - ["20SwipeCellSUI_Example7RowViewV", "_makeView"]
 - ["20SwipeCellSUI_Example7RowViewV", "_makeViewList"]
 - ["20SwipeCellSUI_Example7RowViewV", "_viewListCount"]
 - ["20SwipeCellSUI_Example7RowViewV", "availableWidth"]
 - ["20SwipeCellSUI_Example7RowViewV", "body"]
-- ["20SwipeCellSUI_Example7RowViewV", "currentDragCellID"]
+- ["20SwipeCellSUI_Example7RowViewV", "currentUserInteractionCellID"]
 - ["20SwipeCellSUI_Example7RowViewV", "deletionCallback"]
 - ["20SwipeCellSUI_Example7RowViewV", "init"]
 - !private ["20SwipeCellSUI_Example7RowViewV", "isPinned"]
@@ -403,7 +401,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", ""]
 - !private ["7SwiftUI6VStackV", "frame"]
 - !private ["7SwiftUI6VStackV", "init"]
-- !private ["7SwiftUI4ViewP", "$currentDragCellID"]
+- !private ["7SwiftUI4ViewP", "$currentUserInteractionCellID"]
 - ["7SwiftUI4ViewP", "Binding"]
 - ["7SwiftUI4ViewP", "Body"]
 - ["7SwiftUI4ViewP", "Default_Body"]
@@ -432,7 +430,7 @@ depends-member:
 - !private ["7SwiftUI4ViewP", "blue"]
 - ["7SwiftUI4ViewP", "body"]
 - !private ["7SwiftUI4ViewP", "castToAnyView"]
-- !private ["7SwiftUI4ViewP", "currentDragCellID"]
+- !private ["7SwiftUI4ViewP", "currentUserInteractionCellID"]
 - !private ["7SwiftUI4ViewP", "data"]
 - !private ["7SwiftUI4ViewP", "default"]
 - !private ["7SwiftUI4ViewP", "deletionCallback"]
@@ -446,6 +444,7 @@ depends-member:
 - !private ["7SwiftUI4ViewP", "item"]
 - !private ["7SwiftUI4ViewP", "leftGroup"]
 - !private ["7SwiftUI4ViewP", "none"]
+- !private ["7SwiftUI4ViewP", "onTapGesture"]
 - !private ["7SwiftUI4ViewP", "padding"]
 - !private ["7SwiftUI4ViewP", "pinView"]
 - !private ["7SwiftUI4ViewP", "print"]
@@ -640,4 +639,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "2234d10c2c4fea11c69a726ae5085c5b"
+interface-hash: "32bd86fa1acab193c08bd99e1c72a177"
