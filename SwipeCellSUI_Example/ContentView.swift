@@ -15,8 +15,8 @@ struct ContentView: View {
     
     var body: some View {
         GeometryReader { proxy in
-            ScrollView {
-                LazyVStack(alignment: .center, spacing: 10) {
+            List {
+              
                     ForEach(data, id:\.self) { item in
                         RowView(availableWidth: proxy.size.width - 20, item: item, deletionCallback: { item in
                                 self.data = self.data.filter({ (anyItem) -> Bool in
@@ -25,7 +25,7 @@ struct ContentView: View {
                         }, currentUserInteractionCellID: $currentUserInteractionCellID)
                     }
                 }.animation(.default, value: data)
-            }
+            
         }
     }
 }

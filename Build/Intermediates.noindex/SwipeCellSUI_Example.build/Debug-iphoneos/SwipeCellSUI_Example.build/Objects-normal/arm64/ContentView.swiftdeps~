@@ -14,12 +14,14 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "!="
+- "$currentDragCellID"
 - "-"
 - "..."
 - "=="
 - "AnyView"
 - !private "Array"
 - !private "AssignmentPrecedence"
+- "Binding"
 - "Bool"
 - "BooleanLiteralType"
 - "CGFloat"
@@ -44,6 +46,7 @@ depends-top-level:
 - !private "SwipeCellSettings"
 - !private "TernaryPrecedence"
 - "Text"
+- "UUID"
 - "VStack"
 - "View"
 - !private "availableWidth"
@@ -62,6 +65,10 @@ depends-member:
 - ["SK", ""]
 - !private ["SK", "filter"]
 - ["SK", "map"]
+- ["7SwiftUI7BindingV", "init"]
+- ["7SwiftUI7BindingV", "projectedValue"]
+- ["7SwiftUI7BindingV", "subscript"]
+- ["7SwiftUI7BindingV", "wrappedValue"]
 - !private ["Sb", "toggle"]
 - !private ["So6CGSizeV", "width"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "filter"]
@@ -83,6 +90,7 @@ depends-member:
 - !private ["7SwiftUI15CommandsBuilderV", "buildIf"]
 - !private ["7SwiftUI15CommandsBuilderV", "buildOptional"]
 - ["SL", ""]
+- ["20SwipeCellSUI_Example11ContentViewV", "$currentDragCellID"]
 - ["20SwipeCellSUI_Example11ContentViewV", "$data"]
 - ["20SwipeCellSUI_Example11ContentViewV", "Body"]
 - !private ["20SwipeCellSUI_Example11ContentViewV", "Bool"]
@@ -93,14 +101,17 @@ depends-member:
 - !private ["20SwipeCellSUI_Example11ContentViewV", "RowView"]
 - !private ["20SwipeCellSUI_Example11ContentViewV", "ScrollView"]
 - ["20SwipeCellSUI_Example11ContentViewV", "State"]
+- ["20SwipeCellSUI_Example11ContentViewV", "UUID"]
 - ["20SwipeCellSUI_Example11ContentViewV", "View"]
 - ["20SwipeCellSUI_Example11ContentViewV", ""]
 - ["20SwipeCellSUI_Example11ContentViewV", "_Default_Body"]
+- !private ["20SwipeCellSUI_Example11ContentViewV", "_currentDragCellID"]
 - !private ["20SwipeCellSUI_Example11ContentViewV", "_data"]
 - ["20SwipeCellSUI_Example11ContentViewV", "_makeView"]
 - ["20SwipeCellSUI_Example11ContentViewV", "_makeViewList"]
 - ["20SwipeCellSUI_Example11ContentViewV", "_viewListCount"]
 - ["20SwipeCellSUI_Example11ContentViewV", "body"]
+- ["20SwipeCellSUI_Example11ContentViewV", "currentDragCellID"]
 - ["20SwipeCellSUI_Example11ContentViewV", "data"]
 - ["20SwipeCellSUI_Example11ContentViewV", "init"]
 - !private ["20SwipeCellSUI_Example20ContentView_PreviewsV", "ContentView"]
@@ -308,8 +319,10 @@ depends-member:
 - !private ["SY", "warning"]
 - !private ["7SwiftUI16RoundedRectangleV", "foregroundColor"]
 - !private ["7SwiftUI16RoundedRectangleV", "init"]
+- ["20SwipeCellSUI_Example7RowViewV", "$currentDragCellID"]
 - !private ["20SwipeCellSUI_Example7RowViewV", "$isPinned"]
 - ["20SwipeCellSUI_Example7RowViewV", "AnyView"]
+- ["20SwipeCellSUI_Example7RowViewV", "Binding"]
 - ["20SwipeCellSUI_Example7RowViewV", "Body"]
 - ["20SwipeCellSUI_Example7RowViewV", "Bool"]
 - ["20SwipeCellSUI_Example7RowViewV", "CGFloat"]
@@ -323,16 +336,19 @@ depends-member:
 - ["20SwipeCellSUI_Example7RowViewV", "SwipeCellActionItem"]
 - !private ["20SwipeCellSUI_Example7RowViewV", "SwipeCellSettings"]
 - !private ["20SwipeCellSUI_Example7RowViewV", "Text"]
+- ["20SwipeCellSUI_Example7RowViewV", "UUID"]
 - !private ["20SwipeCellSUI_Example7RowViewV", "VStack"]
 - ["20SwipeCellSUI_Example7RowViewV", "View"]
 - ["20SwipeCellSUI_Example7RowViewV", ""]
 - ["20SwipeCellSUI_Example7RowViewV", "_Default_Body"]
+- !private ["20SwipeCellSUI_Example7RowViewV", "_currentDragCellID"]
 - !private ["20SwipeCellSUI_Example7RowViewV", "_isPinned"]
 - ["20SwipeCellSUI_Example7RowViewV", "_makeView"]
 - ["20SwipeCellSUI_Example7RowViewV", "_makeViewList"]
 - ["20SwipeCellSUI_Example7RowViewV", "_viewListCount"]
 - ["20SwipeCellSUI_Example7RowViewV", "availableWidth"]
 - ["20SwipeCellSUI_Example7RowViewV", "body"]
+- ["20SwipeCellSUI_Example7RowViewV", "currentDragCellID"]
 - ["20SwipeCellSUI_Example7RowViewV", "deletionCallback"]
 - ["20SwipeCellSUI_Example7RowViewV", "init"]
 - !private ["20SwipeCellSUI_Example7RowViewV", "isPinned"]
@@ -387,6 +403,8 @@ depends-member:
 - ["So18UIFocusEnvironmentP", ""]
 - !private ["7SwiftUI6VStackV", "frame"]
 - !private ["7SwiftUI6VStackV", "init"]
+- !private ["7SwiftUI4ViewP", "$currentDragCellID"]
+- ["7SwiftUI4ViewP", "Binding"]
 - ["7SwiftUI4ViewP", "Body"]
 - ["7SwiftUI4ViewP", "Default_Body"]
 - !private ["7SwiftUI4ViewP", "ForEach"]
@@ -414,6 +432,7 @@ depends-member:
 - !private ["7SwiftUI4ViewP", "blue"]
 - ["7SwiftUI4ViewP", "body"]
 - !private ["7SwiftUI4ViewP", "castToAnyView"]
+- !private ["7SwiftUI4ViewP", "currentDragCellID"]
 - !private ["7SwiftUI4ViewP", "data"]
 - !private ["7SwiftUI4ViewP", "default"]
 - !private ["7SwiftUI4ViewP", "deletionCallback"]
@@ -478,15 +497,12 @@ depends-member:
 - ["7SwiftUI16_PreviewProviderP", "_previews"]
 - ["7SwiftUI16_PreviewProviderP", "platform"]
 - ["7SwiftUI16_PreviewProviderP", "previews"]
-- !private ["7SwiftUI7_WidgetP", "animation"]
-- !private ["7SwiftUI7_WidgetP", "init"]
-- !private ["7SwiftUI14_WidgetBuilderV", "buildIf"]
-- !private ["7SwiftUI14_WidgetBuilderV", "buildOptional"]
 depends-nominal:
 - "7SwiftUI10AnimatableP"
 - !private "7SwiftUI9AnimationV"
 - !private "Sa"
 - "SK"
+- "7SwiftUI7BindingV"
 - !private "Sb"
 - !private "So6CGSizeV"
 - !private "8CloudKit21CKRecordValueProtocolP"
@@ -581,8 +597,6 @@ depends-nominal:
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - !private "s21_ObjectiveCBridgeableP"
 - "7SwiftUI16_PreviewProviderP"
-- !private "7SwiftUI7_WidgetP"
-- !private "7SwiftUI14_WidgetBuilderV"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64-apple-ios.swiftmodule"
@@ -606,24 +620,24 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CloudKit.swiftmodule/arm64-apple-ios.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64-apple-ios.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/DeveloperToolsSupport.swiftmodule/arm64-apple-ios.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/usr/include/mach-o/dyld.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "a919fd42a7c185d332b34dd3bc81e395"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "2234d10c2c4fea11c69a726ae5085c5b"
