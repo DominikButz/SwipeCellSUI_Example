@@ -1,0 +1,6 @@
+Target dependency graph (3 targets)
+SwipeCellSUI in SwipeCellSUI
+SwipeCellSUI in SwipeCellSUI, depends on:
+SwipeCellSUI in SwipeCellSUI (explicit)
+SwipeCellSUI_Example in SwipeCellSUI_Example, depends on:
+SwipeCellSUI in SwipeCellSUI (explicit)

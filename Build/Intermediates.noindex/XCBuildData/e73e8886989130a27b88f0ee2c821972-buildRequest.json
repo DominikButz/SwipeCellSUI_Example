@@ -1,0 +1,57 @@
+{
+  "buildCommand" : "prepareForIndexing",
+  "configuredTargets" : [
+    {
+      "guid" : "4d1647aa4414ee5ff81f286fd30b1d1313b16522b71dc11f95b3a058079f378c"
+    }
+  ],
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "iphonesimulator",
+      "sdk" : "iphonesimulator14.5",
+      "sdkVariant" : "iphonesimulator",
+      "supportedArchitectures" : [
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/Dominik/Documents/Programmieren/Libraries/SwipeCellSUI_Example/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/Dominik/Documents/Programmieren/Libraries/SwipeCellSUI_Example/Build/Products",
+      "derivedDataPath" : "/Users/Dominik/Library/Developer/Xcode/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/Dominik/Library/Developer/Xcode/DerivedData/SwipeCellSUI_Example-cgfklqfegzucbnhfjfsjiagadqut/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/Dominik/Library/Developer/Xcode/DerivedData/SwipeCellSUI_Example-cgfklqfegzucbnhfjfsjiagadqut/Index/PrecompiledHeaders",
+      "pchPath" : "/Users/Dominik/Documents/Programmieren/Libraries/SwipeCellSUI_Example/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ASSETCATALOG_FILTER_FOR_DEVICE_MODEL" : "iPod9,1",
+          "ASSETCATALOG_FILTER_FOR_DEVICE_OS_VERSION" : "14.5",
+          "BUILD_ACTIVE_RESOURCES_ONLY" : "YES",
+          "ENABLE_PREVIEWS" : "NO",
+          "TARGET_DEVICE_IDENTIFIER" : "037D0EB2-0465-40A8-B4E0-43424F3D3DD5",
+          "TARGET_DEVICE_MODEL" : "iPod9,1",
+          "TARGET_DEVICE_OS_VERSION" : "14.5",
+          "TARGET_DEVICE_PLATFORM_NAME" : "iphonesimulator"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

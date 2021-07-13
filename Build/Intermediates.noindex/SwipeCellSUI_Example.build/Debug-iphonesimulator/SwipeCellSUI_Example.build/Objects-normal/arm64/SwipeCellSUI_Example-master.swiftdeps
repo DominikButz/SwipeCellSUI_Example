@@ -1,6 +1,6 @@
-version: "Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)"
-options: "eb39a75d4ef57024f098cd5578dd4814"
-build_time: [1615353471, 147640000]
+version: "Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)"
+options: "33a97452a1cf6c0ca74143283e61e48c"
+build_time: [1626157644, 658522000]
 inputs:
   "/Users/Dominik/Documents/Programmieren/Libraries/SwipeCellSUI_Example/SwipeCellSUI_Example/ContentView.swift": [1615353471, 74373674]
   "/Users/Dominik/Documents/Programmieren/Libraries/SwipeCellSUI_Example/SwipeCellSUI_Example/SwipeCellSUI_ExampleApp.swift": [1603087149, 0]
