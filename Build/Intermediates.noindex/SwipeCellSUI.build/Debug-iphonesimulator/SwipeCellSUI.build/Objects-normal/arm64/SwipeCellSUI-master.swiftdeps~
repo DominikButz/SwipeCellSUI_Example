@@ -1,6 +1,18 @@
 version: "Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)"
 options: "f5f49cfffe69dbb997f2903e2c19da71"
-build_time: [1626158533, 777445000]
+<<<<<<< Updated upstream
+build_time: [1626158554, 75866000]
+||||||| constructed merge base
+build_time: [1626157644, 620472000]
+=======
+build_time: [1626158691, 404150000]
+>>>>>>> Stashed changes
 inputs:
-  "/Users/Dominik/Documents/Programmieren/Libraries/SwipeCellSUI/Sources/SwipeCellSUI/SwipeCellSUI.swift": [1626158533, 742153831]
+<<<<<<< Updated upstream
+  "/Users/Dominik/Documents/Programmieren/Libraries/SwipeCellSUI/Sources/SwipeCellSUI/SwipeCellSUI.swift": [1626158554, 18235916]
+||||||| constructed merge base
+  "/Users/Dominik/Documents/Programmieren/Libraries/SwipeCellSUI/Sources/SwipeCellSUI/SwipeCellSUI.swift": [1615353842, 518022498]
+=======
+  "/Users/Dominik/Documents/Programmieren/Libraries/SwipeCellSUI/Sources/SwipeCellSUI/SwipeCellSUI.swift": [1626158691, 342801309]
+>>>>>>> Stashed changes
   "/Users/Dominik/Documents/Programmieren/Libraries/SwipeCellSUI/Sources/SwipeCellSUI/SwipeCellSUI_Model.swift": [1620634337, 106260341]
