@@ -14,10 +14,10 @@
             filePath = "../SwipeCellSUI/Sources/SwipeCellSUI/SwipeCellSUI.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
-            landmarkName = "SwipeCellModifier"
-            landmarkType = "14">
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "nonDraggableCondition(horizontalTranslation:)"
+            landmarkType = "7">
             <Actions>
                <BreakpointActionProxy
                   ActionExtensionID = "Xcode.BreakpointAction.Log">
@@ -39,10 +39,10 @@
             filePath = "SwipeCellSUI_Example/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "leftGroup()"
+            landmarkType = "7">
             <Actions>
                <BreakpointActionProxy
                   ActionExtensionID = "Xcode.BreakpointAction.Log">
