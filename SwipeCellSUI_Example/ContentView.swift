@@ -16,7 +16,7 @@ struct ContentView: View {
     @State private var selection:Int = 0
     
     var body: some View {
-        GeometryReader { proxy in
+    
             VStack {
                 Picker("", selection:  Binding<Int>(
                     get: { self.selection },
@@ -33,32 +33,43 @@ struct ContentView: View {
                 switch selection {
                     
                 case 0:
-                    scrollView(data: data, proxy: proxy).transition(.move(edge: .leading))
+                    scrollView(data: data).transition(.move(edge: .leading))
                 default:
-                    listView(data: data, proxy: proxy).transition(.move(edge: .trailing))
+                    listView(data: data).transition(.move(edge: .trailing))
                 }
                 
+            
+        }
+    }
+    
+    func scrollView(data:[String])->some View {
+        ScrollView {
+            GeometryReader { proxy in
+                LazyVStack(alignment: .center, spacing: 10) {
+                    listContent(data: data, rowWidth: proxy.size.width - 20)
+                }.animation(.default, value: data)
             }
         }
     }
     
-    func scrollView(data:[String], proxy:GeometryProxy)->some View {
-        ScrollView {
-            LazyVStack(alignment: .center, spacing: 10) {
-                listContent(data: data, proxy: proxy)
-            }.animation(.default, value: data)
+        func listView(data:[String])->some View {
+            GeometryReader { proxy in
+                List {
+                    
+                    listContent(data: data, rowWidth: proxy.size.width)
+                }
+                .animation(.default, value: data)
+                .listStyle(.plain)
+            }.padding(.horizontal, 5)
+            
         }
-    }
+          
+              
+ 
     
-    func listView(data:[String], proxy:GeometryProxy)->some View {
-        return List {
-            listContent(data: data, proxy: proxy)
-        }.animation(.default, value: data)
-    }
-    
-    func listContent(data:[String], proxy:GeometryProxy) -> some View {
+    func listContent(data:[String], rowWidth: CGFloat) -> some View {
         ForEach(data, id:\.self) { item in
-            RowView(availableWidth: proxy.size.width - 20, item: item, fillColor: selection == 0 ? .green :  .orange, deletionCallback: { item in
+            RowView(availableWidth: rowWidth, item: item, fillColor: selection == 0 ? .green :  .orange, deletionCallback: { item in
                     self.data = self.data.filter({ (anyItem) -> Bool in
                         anyItem != item
                     })
@@ -79,9 +90,9 @@ struct RowView: View {
     @Binding var currentUserInteractionCellID: String?
     
     var body: some View {
-        Text(item).frame(width: availableWidth, height:100)
+        Text(item).padding(.leading, 5).frame(width: availableWidth, height:100, alignment: .leading)
             .background(RoundedRectangle(cornerRadius: 5).fill(fillColor))
-            .swipeCell(id: self.item, cellWidth: availableWidth, leadingSideGroup: leftGroup(), trailingSideGroup: rightGroup(), currentUserInteractionCellID: $currentUserInteractionCellID, settings: SwipeCellSettings())
+            .swipeCell(id: self.item,  leadingSideGroup: leftGroup(), trailingSideGroup: rightGroup(), currentUserInteractionCellID: $currentUserInteractionCellID, settings: SwipeCellSettings(addWidthMargin:5))
             .onTapGesture {
                 self.currentUserInteractionCellID = item
             }
